@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using teorie.masina.model;
 
-namespace teorie.Masina.service
+namespace teorie.masina.service
 {
     public class MasinaService
     {

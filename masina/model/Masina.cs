@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace teorie.Masina.model
+namespace teorie.masina.model
 {
     public class Masina
     {

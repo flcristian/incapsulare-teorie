@@ -1,4 +1,4 @@
-﻿using teorie.Masina.service;
+﻿using teorie.masina.service;
 
 internal class Program
 {
