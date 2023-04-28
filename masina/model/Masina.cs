@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace teorie
+namespace teorie.Masina.model
 {
     public class Masina
     {
@@ -18,9 +18,7 @@ namespace teorie
         private int _greutate;
         private int _id;
 
-
-        //Constructor
-
+        // Constructor
 
         public Masina()
         {
@@ -61,7 +59,7 @@ namespace teorie
                 }
             }
         }
-        
+
         public string Model
         {
             get { return _model; }
@@ -111,7 +109,7 @@ namespace teorie
             get { return _an; }
             set
             {
-                if(value < 2000)
+                if (value < 2000)
                 {
                     _an = -1;
                 }
@@ -125,7 +123,7 @@ namespace teorie
         public int Greutate
         {
             get { return _greutate; }
-            set 
+            set
             {
                 if (value > 2000)
                 {
@@ -143,6 +141,8 @@ namespace teorie
             get { return _id; }
             set { _id = value; }
         }
+
+        // Metode
 
         public string Describe()
         {

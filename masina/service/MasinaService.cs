@@ -5,21 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace teorie
+namespace teorie.Masina.service
 {
     public class MasinaService
     {
-
         private List<Masina> _listMasina;
 
         public MasinaService()
         {
             _listMasina = new List<Masina>();
-
-            this.load();
+            Load();
         }
 
-        public void load()
+        // Metode
+
+        public void Load()
         {
             Masina m1 = new Masina("Nissan", "Quest", "39926", "Burke Elgie", "Teal", 1995, 1769, 1);
             Masina m2 = new Masina("Saab", "9000", "43804", "Adoree Aspey", "Puce", 1993, 1457, 2);
@@ -36,7 +36,7 @@ namespace teorie
             _listMasina.Add(m6);
         }
 
-        public void afisare()
+        public void Afisare()
         {
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             foreach (Masina m in _listMasina)
@@ -45,5 +45,20 @@ namespace teorie
             }
         }
 
+
+        //todo metoda ce primeste ca parametru un id si returneaza masina 
+
+        public Masina FindMasinaById(int id)
+        {
+            foreach (Masina m in _listMasina)
+            {
+                if (m.Id == id)
+                {
+                    return m;
+                }
+            }
+
+            return null;
+        }
     }
 }
