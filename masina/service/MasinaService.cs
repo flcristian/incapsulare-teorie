@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,11 @@ namespace teorie.masina.service
     {
         private List<Masina> _listMasina;
 
+        
         public MasinaService()
         {
             _listMasina = new List<Masina>();
-            Load();
+            this.Load();
         }
 
         // Metode
@@ -28,7 +30,7 @@ namespace teorie.masina.service
             Masina m4 = new Masina("GMC", "1500 Club Coupe", "6094", "Seumas Spurret", "Crimson", 1994, 1634, 4);
             Masina m5 = new Masina("BMW", "745", "48672", "Penn Benkhe", "Mauv", 2003, 1742, 5);
             Masina m6 = new Masina("Toyota", "Tacoma", "34440", "Thurstan Buterton", "Indigo", 2003, 1644, 6);
-
+            
             _listMasina.Add(m1);
             _listMasina.Add(m2);
             _listMasina.Add(m3);
@@ -45,9 +47,6 @@ namespace teorie.masina.service
                 Console.WriteLine(m.Describe());
             }
         }
-
-
-        //todo metoda ce primeste ca parametru un id si returneaza masina 
 
         public Masina FindMasinaById(int id)
         {
